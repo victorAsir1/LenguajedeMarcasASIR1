@@ -1,2 +1,0 @@
-# LenguajedeMarcasASIR1
-Ordinaria
