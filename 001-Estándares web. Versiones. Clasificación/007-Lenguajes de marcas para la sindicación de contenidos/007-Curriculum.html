@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum - Víctor José Ureña Renau</title>
+    <style>
+ 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño del elemento */
+        }
+        html {
+            background: #e0e0e0; /* Color de fondo de toda la página (fuera del currículum) */
+            font-family: 'Poppins', 'Segoe UI', sans-serif; /* Fuente principal */
+        }
+        body {
+            width: 850px; /* Ancho del currículum */
+            margin: 40px auto; /* Centrado horizontal y margen superior */
+            background: #fff; /* Fondo blanco para el contenido */
+            display: flex; /* Usa flexbox para crear las dos columnas */
+            min-height: 1100px; /* Altura mínima */
+            border-radius: 10px; /* Bordes redondeados */
+            overflow: hidden; /* Oculta contenido que sobresalga */
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25); /* Sombra alrededor del currículum */
+        }
+
+   
+        #izquierda {
+            background: #009bb6; /* Verde oscuro profesional */
+            color: white; /* Texto blanco */
+            flex: 1.1; /* Ocupa menos espacio que la columna derecha */
+            padding: 30px 25px; /* Espaciado interno */
+            display: flex;
+            flex-direction: column; /* Alinea los elementos en columna */
+            align-items: center; /* Centra horizontalmente */
+            gap: 30px; /* Espacio entre bloques */
+        }
+
+        #izquierda img {
+            width: 100%; /* Imagen ocupa todo el ancho */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 0 8px rgba(0, 48, 179, 0.4); /* Sombra alrededor de la foto */
+        }
+
+        #izquierda h3 {
+            text-transform: uppercase; /* Convierte texto a mayúsculas */
+            font-size: 13px;
+            letter-spacing: 1px; /* Espaciado entre letras */
+            border-bottom: 1px solid rgba(252, 252, 252, 0.4); /* Línea bajo el título */
+            margin-bottom: 10px;
+            padding-bottom: 4px;
+        }
+
+        #izquierda ul {
+            list-style: none; /* Quita los puntos de las listas */
+        }
+
+        #izquierda li {
+            font-size: 12px;
+            margin: 5px 0;
+        }
+
+        #izquierda article {
+            width: 100%; /* Cada bloque ocupa todo el ancho disponible */
+        }
+
+        #derecha {
+            flex: 3; /* Ocupa más espacio que la izquierda */
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px; /* Espacio entre secciones */
+        }
+
+    
+        #derecha h1 {
+            font-size: 32px; color: white;
+         background: #0e80ad; /* Azul oscuro profesional */
+    display: inline-block; /* Hace que el fondo solo abarque el texto */
+    padding: 10px 100px;
+    border-radius: 6px; /* Bordes redondeados suaves */
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+        }
+        #derecha h2 {
+            font-size: 16px;
+            color: #218025; /* Verde más claro */
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+  
+        #derecha p {
+            font-size: 13px;
+            color: #333;
+            line-height: 1.6; /* Espaciado entre líneas */
+            text-align: justify; /* Justifica el texto */
+        }
+
+       
+        #derecha h3 {
+            font-size: 15px;
+            color: #2e7d32;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        #experiencia {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espacio entre cada experiencia */
+        }
+
+        #experiencia article {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #f8f8f8; /* Fondo gris claro */
+            padding: 12px 15px;
+            border-left: 4px solid #2e7d32; /* Línea verde decorativa */
+            border-radius: 8px;
+            transition: all 0.3s ease; /* Suaviza efectos hover */
+        }
+
+        #experiencia article:hover {
+            background: #e8f5e9; /* Fondo verde claro al pasar el ratón */
+            transform: scale(1.01); /* Efecto de ampliación */
+        }
+
+        #experiencia img {
+            width: 55px;
+            height: 55px;
+            border-radius: 6px;
+            object-fit: cover; /* Ajusta la imagen sin deformarla */
+        }
+
+        .texto h4 {
+            font-size: 14px;
+            color: #222;
+            margin-bottom: 3px;
+        }
+
+        .texto h5 {
+            font-size: 13px;
+            color: #2e7d32;
+            margin-bottom: 5px;
+        }
+
+        .texto p {
+            font-size: 12px;
+            color: #555;
+        }
+
+        #formacion {
+            background: #f8f8f8;
+            padding: 15px;
+            border-left: 4px solid #2e7d32;
+            border-radius: 8px;
+        }
+
+        #formacion p {
+            font-size: 13px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+     
+        #izquierda li::before {
+            content: "• ";
+            color: #a5d6a7; /* Verde claro */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <section id="izquierda">
+        <img src="WhatsApp Image 2025-10-30 at 8.42.22 AM.jpeg" alt="Foto de Víctor José Ureña Renau">
+
+        <article>
+            <article>
+                <h3>Contacto</h3>
+                <ul>
+                    <li>📧 victor.jose.urena.renau@alu.ceacfp.es</li>
+                    <li>📞722 76 53 29</li>
+                    <li>📍Valencia,Tavernes Blanques</li>
+                </ul>
+            </article>
+        </article>
+
+        <article>
+            <h3>Habilidades </h3>
+            <ul>
+                <li>Liderazgo</li>
+                <li>Comunicacion asertiva</li>
+                <li>Gestion de Activos</li>
+                <li>Resolución de problemas</li>
+                <li>Elaboracion de reportes </li>
+                <li>Trabajo de Equipo</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>Habilidades Técnicas</h3>
+            <ul>
+                <li>Administración de sistemas (Linux / Windows)</li>
+                <li>Configuración de redes</li>
+                <li>Virtualización y Docker</li>
+                <li>Bases de datos MySQL / MariaDB</li>
+                <li>Ciberseguridad básica</li>
+            </ul>
+        </article>
+
+    </section>
+
+    <section id="derecha">
+        <div>
+        <h1>Víctor José Ureña Renau</h1>
+        <h2>Estudiante de ASIR</h2>
+        </div>
+        <!-- Descripción general o resumen profesional -->
+        <p>
+            Estudiante del ciclo formativo de Grado Superior en Administración de Sistemas Informáticos en Red (ASIR),
+            con sólidos conocimientos en redes, virtualización, sistemas operativos y ciberseguridad. 
+            Soy una persona organizada, proactiva y con gran motivación por aplicar mis conocimientos técnicos
+            en entornos profesionales reales, aportando soluciones eficientes y seguras.
+        </p>
+
+        <!-- Experiencia laboral -->
+        <h3>Experiencia Profesional</h3>
+        <div id="experiencia">
+            <article>
+                <div class="texto">
+                    <h4>2024 – 2025 | Técnico de Soporte</h4>
+                    <h5>Institucion IES EL GRAO</h5>
+                    <p>Soporte técnico a usuarios, mantenimiento de servidores y resolución de incidencias de red.</p>
+                </div>
+            </article>
+
+        </div>
+        <h3>Formación Académica</h3>
+        <div id="formacion">
+            <p><strong>Grado Superior en Administración de Sistemas Informáticos en Red (ASIR)</strong><br>
+            Ceac Fp, Valencia — 2025 - Actualidad</p>
+        
+        </div>
+        <div id="formacion">
+            <p><strong>Grado Medio Sistemas Microinformaticos en Red</strong><br>
+            Aula Campus, Valencia — 2024 - 2025</p>
+        
+        </div>
+    </section>
+</body>
+</html>
