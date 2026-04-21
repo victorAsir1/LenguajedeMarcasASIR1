@@ -57,7 +57,6 @@ def index():
     '''
     
     for dia in range(1, 31):
-        # He añadido una clase 'especial' a algunos días para que resalten
         clase_extra = " especial" if dia in [10, 11, 12, 13] else ""
         cadena += f'<div class="dia{clase_extra}">{dia}</div>'
     
