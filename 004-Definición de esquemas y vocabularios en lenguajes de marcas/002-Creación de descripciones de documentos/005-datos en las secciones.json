@@ -1,0 +1,23 @@
+{
+	"datos_personales":{
+  	"nombre":"Victor Jose",
+    "apellidos":"Ureña Renau",
+    "email":"victorrenau@gmail.com"
+  },
+  "formacion":[
+    {
+    	"centro":"Aula Campus",
+      "periodo":"2023-2025",
+      "estudios":"Sistemas Microinformaticos en red"
+    },
+    {
+    	"centro":"CEAC",
+      "periodo":"2025-2026",
+      "estudios":"Administracion de sistemas informaticos en red"
+    }
+    
+  ],
+  "experiencia":{
+  	
+  }
+}
