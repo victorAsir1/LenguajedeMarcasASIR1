@@ -1,0 +1,12 @@
+{
+	"datos_personales":{
+    "nombre":"Victor Jose",
+    "apellidos":" Ureña Renau",
+    "email":"victorrenau@gmail.com"
+  },
+  "formacion":[
+    {"centro":"Centro 1","periodo":"periodo1"},
+    {"centro":"Centro 2","periodo":"periodo2"},
+    {"centro":"Centro 3","periodo":"periodo3"}
+  ]
+}
