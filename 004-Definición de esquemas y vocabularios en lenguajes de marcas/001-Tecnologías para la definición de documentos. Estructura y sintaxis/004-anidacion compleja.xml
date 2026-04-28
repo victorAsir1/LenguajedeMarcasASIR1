@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculum>
+  <datos_personales>
+    <nombre>Victor Jose</nombre>
+    <apellidos>Ureña Renau</apellidos>
+    <email>victorrenau@gmail.com</email>
+  </datos_personales>
+  <experiencia_profesional>
+    <experiencia>
+      <empresa>Ayuntamiento</empresa>
+      <periodo>2026</periodo>
+      <responsabilidades>
+        Mantenimiento de Equipos y instalacion de sistemas operativos
+      </responsabilidades>
+    </experiencia>
+  </experiencia_profesional>
+</curriculum>
