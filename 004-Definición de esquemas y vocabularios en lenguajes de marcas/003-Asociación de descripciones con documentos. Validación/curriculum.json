@@ -1,12 +1,20 @@
 {
-	"datos_personales":{
-    "nombre":"Victor Jose",
-    "apellidos":" Ureña Renau",
-    "email":"victorrenau@gmail.com"
+  "datos_personales": {
+    "nombre": "Victor Jose",
+    "apellidos": "Ureña Renau",
+    "email": "victorrenau@gmail.com"
   },
-  "formacion":[
-    {"centro":"Centro 1","periodo":"periodo1"},
-    {"centro":"Centro 2","periodo":"periodo2"},
-    {"centro":"Centro 3","periodo":"periodo3"}
-  ]
+  "formacion": [
+    {
+      "centro": "Aula Campus",
+      "periodo": "2023-2025",
+      "estudios": "Sistemas Microinformáticos en Red (SMR)"
+    },
+    {
+      "centro": "CEAC",
+      "periodo": "2025-2026",
+      "estudios": "Administración de Sistemas Informáticos en Red (ASIR)"
+    }
+  ],
+  "experiencia": []
 }
