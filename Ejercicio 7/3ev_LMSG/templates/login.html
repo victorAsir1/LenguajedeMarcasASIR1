@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="login-container">
+    <div class="card login-card">
+        <div class="card-body">
+            <div class="text-center mb-5">
+                <h2 class="logo-login">{{ APP_NAME.split('|')[0] }}<span>|{{ APP_NAME.split('|')[1] }}</span></h2>
+                <p class="text-secondary mt-2">Accede a tu panel de control</p>
+            </div>
+            
+            <form method="POST">
+                <div class="mb-4">
+                    <label>Usuario</label>
+                    <input type="text" name="username" class="form-control" placeholder="Introduce tu usuario" required autofocus>
+                </div>
+                <div class="mb-4">
+                    <label>Contraseña</label>
+                    <input type="password" name="password" class="form-control" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 py-3 mt-3">Entrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

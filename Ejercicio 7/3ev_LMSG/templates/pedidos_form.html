@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Nuevo Pedido</h2>
+<form method="POST" class="mt-3">
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-dark text-white">Datos del Pedido</div>
+        <div class="card-body row">
+            <div class="col-md-4 mb-3">
+                <label>Cliente *</label>
+                <select name="cliente_id" class="form-select" required>
+                    <option value="">Selecciona un cliente...</option>
+                    {% for c in clientes %}
+                    <option value="{{ c.id }}">{{ c.apellidos }}, {{ c.nombre }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>Estado</label>
+                <select name="estado" class="form-select">
+                    <option value="borrador">Borrador</option>
+                    <option value="confirmado">Confirmado</option>
+                    <option value="pagado">Pagado</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>Notas</label>
+                <input type="text" name="notas" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-dark text-white">Líneas de Producto (Máx 3)</div>
+        <div class="card-body">
+            {% for i in range(1, 4) %}
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <select name="producto_{{ i }}" class="form-select">
+                        <option value="">-- Selecciona un producto --</option>
+                        {% for pr in productos %}
+                        <option value="{{ pr.id }}">{{ pr.nombre }} (Precio base: ${{ pr.precio }})</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="number" name="cantidad_{{ i }}" class="form-control" placeholder="Cantidad (ej. 1)" min="1">
+                </div>
+                <div class="col-md-3">
+                    <input type="number" step="0.01" name="precio_{{ i }}" class="form-control" placeholder="Precio manual">
+                </div>
+            </div>
+            {% endfor %}
+            <small class="text-muted">Si dejas el selector de producto vacío, esa línea se ignorará.</small>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success btn-lg mb-5">Crear Pedido</button>
+    <a href="{{ url_for('pedidos_list') }}" class="btn btn-secondary btn-lg mb-5 ms-2">Cancelar</a>
+</form>
+{% endblock %}
