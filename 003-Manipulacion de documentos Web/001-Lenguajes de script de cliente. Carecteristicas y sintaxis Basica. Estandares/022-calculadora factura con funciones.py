@@ -8,7 +8,7 @@ def calculoTotal(base, irpf):
 
 
 
-print("Programa calculadora de facturas v0.1 Jose Vicente Carratala")
+print("Programa calculadora de facturas")
 base = input("Introduce la base de la factura: ")
 base_numerico = float(base)
 
