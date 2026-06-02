@@ -10,12 +10,12 @@
 
 <header>
     <h1>Victor Ureña</h1>
-    <h2>Técnico de redes</h2>
-    <p>Fecha de consulta: {{ datos.fecha.dia }}/{{ datos.fecha.mes }}/{{ datos.fecha.anio }}</p>
+    <h2>Técnico de Redes</h2>
+    <p>Año de consulta: {{ datos.anio }}</p>
     <nav>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobremi">Sobre mi</a></li>
+            <li><a href="#sobremi">Sobre mí</a></li>
             <li><a href="#blog">Blog Técnico</a></li>
             <li><a href="#portafolio">Portafolio</a></li>
             <li><a href="#contacto">Contacto</a></li>
@@ -31,19 +31,22 @@
     </section>
 
     <section id="sobremi">
-        <h3>Sobre mi</h3>
+        <h3>Sobre mí</h3>
         <p>Soy un técnico de redes con conocimientos en instalación, configuración y mantenimiento de sistemas informáticos y de comunicaciones...</p>
     </section>
 
     <section id="blog">
-        <h3>Blog y Conocimientos Especializados</h3>
+        <h3>Blog y Conocimientos Especializados (Desde SQLite)</h3>
         <div id="contenedor-blog">
+            {# Este bucle lee directamente de la tabla 'piezas' de tu base de datos #}
             {% for articulo in datos.articulos %}
-            <article class="entrada-blog" style="border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 5px;">
+            <article class="entrada-blog" style="border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 5px; background: #fff;">
                 <h4>{{ articulo.titulo }}</h4>
                 <p><small>Publicado el: {{ articulo.fecha }}</small></p>
                 <p>{{ articulo.texto }}</p>
             </article>
+            {% else %}
+            <p>No se encontraron artículos en la tabla 'piezas'.</p>
             {% endfor %}
         </div>
     </section>
@@ -51,7 +54,6 @@
     <section id="portafolio">
         <h3>Experiencia Técnica</h3>
         <div id="rejilla" style="display: flex; flex-wrap: wrap; gap: 20px;">
-
             <article>
                 <h4>Sistemas y hardware</h4>
                 <p>Montaje y mantenimiento de equipos informáticos.</p>
@@ -63,7 +65,6 @@
                 <p>Configuración de redes LAN y WiFi, IP y DNS.</p>
                 <img src="{{ url_for('static', filename='img/tecnico-redes.jpg.webp') }}" width="200" alt="Redes">
             </article>
-
         </div>
     </section>
 
@@ -88,7 +89,7 @@
 </main>
 
 <footer>
-    <p>&copy; {{ datos.fecha.anio }} Victor Ureña - Todos los derechos reservados</p>
+    <p>&copy; {{ datos.anio }} Victor Ureña - Todos los derechos reservados</p>
 </footer>
 
 </body>

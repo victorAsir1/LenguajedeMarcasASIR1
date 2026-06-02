@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Ureña - Portafolio Técnico</title>
+</head>
+<body style="font-family: sans-serif; margin: 40px; background: #f4f4f9;">
+
+<header>
+    <h1>Victor Ureña</h1>
+    <h2>Técnico de Redes</h2>
+    <p>Año de consulta: {{ datos.anio }}</p>
+</header>
+
+<main>
+    <section id="sobremi">
+        <h3>Sobre mí</h3>
+        <p>Soy un técnico de redes con conocimientos en instalación, configuración y mantenimiento de sistemas informáticos...</p>
+    </section>
+
+    <section id="blog">
+        <h3>Blog Técnico (Datos desde SQLite)</h3>
+        <div id="contenedor-blog">
+            {% for articulo in datos.articulos %}
+            <div style="border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 5px; background: #fff;">
+                <h4>{{ articulo.titulo }}</h4>
+                <p><small>Publicado el: {{ articulo.fecha }}</small></p>
+                <p>{{ articulo.texto }}</p>
+            </div>
+            {% else %}
+            <p>No se encontraron artículos en la tabla 'piezas'.</p>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; {{ datos.anio }} Victor Ureña - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
