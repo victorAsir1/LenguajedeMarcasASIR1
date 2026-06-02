@@ -1,22 +1,16 @@
-app = Flask(__name__)											
+from flask import Flask, render_template  # <--- ¡Importación corregida!
+import os
 
-@app.get("/")																							
-def inicio():														
-	conexion = sqlite3.connect("portafolio.db")		
-	conexion.row_factory = sqlite3.Row 			
-	cursor = conexion.cursor()							
-	cursor.execute("SELECT * FROM piezas")
-	piezas = cursor.fetchall()					
-	
-	lista = []															
- 
-	for pieza in piezas:										
-		lista.append(dict(pieza))   						
+app = Flask(__name__)
 
-	print(lista)														
+# Configuración de rutas automáticas por si usas archivos externos en el futuro
+DIRECTORIO_ACTUAL = os.path.dirname(os.path.abspath(__file__))
 
-	
-	return render_template("portafolio.html",datos=lista)	
+@app.get("/")
+def inicio():
+    # De momento devolvemos texto directo para comprobar que el servidor arranca bien
+    return "<h1>¡Mi Portafolio con Flask funciona correctamente!</h1><p>Servidor activo en Python 3.13.</p>"
 
-if __name__ == "__main__":								
-	app.run(debug=True)										
+if __name__ == "__main__":
+    # Arrancamos el servidor en modo depuración
+    app.run(debug=True)
