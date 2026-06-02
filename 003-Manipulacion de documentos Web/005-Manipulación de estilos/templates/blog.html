@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Blog Personal</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; background: #f4f4f9; }
+        .post { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; }
+        h2 { color: #3498db; margin-top: 0; }
+    </style>
+</head>
+<body>
+    <h1>Entradas del Blog</h1>
+    {% for entrada in datos %}
+        <div class="post">
+            <h2>{{ entrada.titulo }}</h2>
+            <p>{{ entrada.contenido }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
