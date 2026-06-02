@@ -1,6 +1,6 @@
 
 print("Programa calculador del IRPF v0.1")
-print("Por Raúl Ruiz-Cornejo Badia")
+print("Por Victor Jose Ureña Renau")
 
 base_imponible = input("Introduce la base imponible: ")
 
